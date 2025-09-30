@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  ai-interview-assistant:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    environment:
+      - REACT_APP_ENV=production
+      - REACT_APP_GEMINI_API_KEY=${REACT_APP_GEMINI_API_KEY}
+    restart: unless-stopped
+    
+  # Optional: Redis for caching (if needed in future)
+  # redis:
+  #   image: redis:alpine
+  #   ports:
+  #     - "6379:6379"
+  #   restart: unless-stopped
