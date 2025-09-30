@@ -406,8 +406,8 @@ Only return the JSON object, no additional text.`;
   }
   
   private getDefaultTimeLimit(difficulty: string): number {
-    const limits = { easy: 45, medium: 90, hard: 150 };
-    return limits[difficulty as keyof typeof limits] || 90;
+    const limits = { easy: 20, medium: 60, hard: 120 };
+    return limits[difficulty as keyof typeof limits] || 60;
   }
 
   // Fallback methods for when Gemini API fails
@@ -417,42 +417,42 @@ Only return the JSON object, no additional text.`;
         id: `q1_${Date.now()}`,
         text: "What is the difference between var, let, and const in JavaScript?",
         difficulty: 'easy' as const,
-        timeLimit: 45,
+        timeLimit: 20,
         category: "JavaScript Basics"
       },
       {
         id: `q2_${Date.now() + 1}`,
         text: "Explain what JSX is and how it relates to React.",
         difficulty: 'easy' as const,
-        timeLimit: 45,
+        timeLimit: 20,
         category: "React Basics"
       },
       {
         id: `q3_${Date.now() + 2}`,
         text: "Explain the concept of closures in JavaScript with an example.",
         difficulty: 'medium' as const,
-        timeLimit: 90,
+        timeLimit: 60,
         category: "JavaScript Advanced"
       },
       {
         id: `q4_${Date.now() + 3}`,
         text: "What is the difference between useEffect and useLayoutEffect in React?",
         difficulty: 'medium' as const,
-        timeLimit: 90,
+        timeLimit: 60,
         category: "React Hooks"
       },
       {
         id: `q5_${Date.now() + 4}`,
         text: "Design a scalable system for real-time notifications. Consider performance and reliability.",
         difficulty: 'hard' as const,
-        timeLimit: 150,
+        timeLimit: 120,
         category: "System Design"
       },
       {
         id: `q6_${Date.now() + 5}`,
         text: "How would you optimize a Node.js application experiencing memory leaks and high CPU usage?",
         difficulty: 'hard' as const,
-        timeLimit: 150,
+        timeLimit: 120,
         category: "Performance Optimization"
       }
     ];
