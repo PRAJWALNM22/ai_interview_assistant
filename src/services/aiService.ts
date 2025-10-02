@@ -41,9 +41,9 @@ export class AIService {
       const prompt = `Generate 6 technical interview questions for a full-stack developer position focusing on React, Node.js, and JavaScript. 
       
 Requirements:
-- 2 easy questions (basic concepts, 20-60 seconds to answer)
-- 2 medium questions (intermediate concepts, 60-120 seconds to answer)  
-- 2 hard questions (advanced concepts, 120-180 seconds to answer)
+- 2 easy questions (basic concepts, 20 seconds to answer)
+- 2 medium questions (intermediate concepts, 60 seconds to answer)  
+- 2 hard questions (advanced concepts, 120 seconds to answer)
 - Cover areas like: JavaScript fundamentals, React concepts, Node.js, web development, system design
 - Make questions practical and relevant to real development work
 
